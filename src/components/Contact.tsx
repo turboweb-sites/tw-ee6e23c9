@@ -1,35 +1,11 @@
 import { useState, useEffect, useRef } from 'react'
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react'
 
-const vehicleTypes = [
-  'Sedan',
-  'SUV / Truck',
-  'Sports Car',
-  'Exotic / Supercar',
-  'Electric Vehicle',
-  'Classic / Vintage',
-  'Other',
-]
-
-const serviceOptions = [
-  'Exterior Detailing – $179',
-  'Interior Deep Cleaning – $199',
-  'Full Detail Package – $349',
-  'Paint Correction – From $499',
-  'Ceramic Coating – From $999',
-  'Mobile Detailing',
-]
+const vehicleTypes = ['Sedan', 'SUV / Truck', 'Sports Car', 'Exotic / Supercar', 'Electric Vehicle', 'Classic / Vintage', 'Other']
+const serviceOptions = ['Exterior Detailing – $179', 'Interior Deep Cleaning – $199', 'Full Detail Package – $349', 'Paint Correction – From $499', 'Ceramic Coating – From $999', 'Mobile Detailing']
 
 export default function Contact() {
-  const [form, setForm] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    vehicle: '',
-    service: '',
-    date: '',
-    message: '',
-  })
+  const [form, setForm] = useState({ name: '', phone: '', email: '', vehicle: '', service: '', date: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
   const [visible, setVisible] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
@@ -54,8 +30,7 @@ export default function Contact() {
     setForm({ name: '', phone: '', email: '', vehicle: '', service: '', date: '', message: '' })
   }
 
-  const inputClasses =
-    'w-full px-4 py-3.5 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-gold-500/50 focus:ring-1 focus:ring-gold-500/30 focus:bg-white/10 transition-all duration-300 outline-none'
+  const inputClasses = 'w-full px-4 py-3.5 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-gold-500/50 focus:ring-1 focus:ring-gold-500/30 focus:bg-white/10 transition-all duration-300 outline-none'
 
   return (
     <section id="contact" className="section-padding relative overflow-hidden" ref={ref}>
@@ -89,104 +64,42 @@ export default function Contact() {
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
                       <label className="block text-sm text-gray-400 mb-2">Full Name *</label>
-                      <input
-                        type="text"
-                        name="name"
-                        value={form.name}
-                        onChange={handleChange}
-                        placeholder="John Smith"
-                        required
-                        className={inputClasses}
-                      />
+                      <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="John Smith" required className={inputClasses} />
                     </div>
                     <div>
                       <label className="block text-sm text-gray-400 mb-2">Phone Number *</label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={form.phone}
-                        onChange={handleChange}
-                        placeholder="(310) 555-0199"
-                        required
-                        className={inputClasses}
-                      />
+                      <input type="tel" name="phone" value={form.phone} onChange={handleChange} placeholder="(310) 555-0199" required className={inputClasses} />
                     </div>
                   </div>
-
                   <div>
                     <label className="block text-sm text-gray-400 mb-2">Email Address *</label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={form.email}
-                      onChange={handleChange}
-                      placeholder="john@example.com"
-                      required
-                      className={inputClasses}
-                    />
+                    <input type="email" name="email" value={form.email} onChange={handleChange} placeholder="john@example.com" required className={inputClasses} />
                   </div>
-
                   <div className="grid sm:grid-cols-2 gap-5">
                     <div>
                       <label className="block text-sm text-gray-400 mb-2">Vehicle Type *</label>
-                      <select
-                        name="vehicle"
-                        value={form.vehicle}
-                        onChange={handleChange}
-                        required
-                        className={inputClasses}
-                      >
+                      <select name="vehicle" value={form.vehicle} onChange={handleChange} required className={inputClasses}>
                         <option value="">Select vehicle type</option>
-                        {vehicleTypes.map((v) => (
-                          <option key={v} value={v}>{v}</option>
-                        ))}
+                        {vehicleTypes.map((v) => (<option key={v} value={v}>{v}</option>))}
                       </select>
                     </div>
                     <div>
                       <label className="block text-sm text-gray-400 mb-2">Service *</label>
-                      <select
-                        name="service"
-                        value={form.service}
-                        onChange={handleChange}
-                        required
-                        className={inputClasses}
-                      >
+                      <select name="service" value={form.service} onChange={handleChange} required className={inputClasses}>
                         <option value="">Select a service</option>
-                        {serviceOptions.map((s) => (
-                          <option key={s} value={s}>{s}</option>
-                        ))}
+                        {serviceOptions.map((s) => (<option key={s} value={s}>{s}</option>))}
                       </select>
                     </div>
                   </div>
-
                   <div>
                     <label className="block text-sm text-gray-400 mb-2">Preferred Date *</label>
-                    <input
-                      type="date"
-                      name="date"
-                      value={form.date}
-                      onChange={handleChange}
-                      required
-                      className={inputClasses}
-                    />
+                    <input type="date" name="date" value={form.date} onChange={handleChange} required className={inputClasses} />
                   </div>
-
                   <div>
                     <label className="block text-sm text-gray-400 mb-2">Additional Notes</label>
-                    <textarea
-                      name="message"
-                      value={form.message}
-                      onChange={handleChange}
-                      placeholder="Any specific concerns or requests..."
-                      rows={3}
-                      className={`${inputClasses} resize-none`}
-                    />
+                    <textarea name="message" value={form.message} onChange={handleChange} placeholder="Any specific concerns or requests..." rows={3} className={`${inputClasses} resize-none`} />
                   </div>
-
-                  <button
-                    type="submit"
-                    className="w-full py-4 gold-gradient text-black font-bold text-lg rounded-xl hover:shadow-2xl hover:shadow-gold-500/30 transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-2"
-                  >
+                  <button type="submit" className="w-full py-4 gold-gradient text-black font-bold text-lg rounded-xl hover:shadow-2xl hover:shadow-gold-500/30 transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-2">
                     <Send className="w-5 h-5" />
                     Book Your Appointment
                   </button>
