@@ -7,7 +7,6 @@ export default function Footer() {
     <footer className="bg-black border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-lg gold-gradient flex items-center justify-center font-display font-bold text-black text-lg">
@@ -29,7 +28,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="text-white font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2.5">
@@ -46,7 +44,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Social & Contact */}
           <div>
             <h4 className="text-white font-semibold mb-4">Follow Us</h4>
             <div className="flex gap-3 mb-6">
@@ -67,7 +64,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="mt-10 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-600 text-sm">
             © {year} Elite Auto Detailing Los Angeles. All rights reserved.

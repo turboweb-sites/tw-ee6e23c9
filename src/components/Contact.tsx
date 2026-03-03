@@ -64,7 +64,6 @@ export default function Contact() {
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl" />
 
       <div className={`relative max-w-7xl mx-auto ${visible ? 'animate-fade-in-up' : 'opacity-0'}`}>
-        {/* Section Header */}
         <div className="text-center mb-16">
           <span className="text-gold-400 text-sm font-semibold tracking-[0.2em] uppercase">Get in Touch</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mt-3 mb-6">
@@ -77,7 +76,6 @@ export default function Contact() {
         </div>
 
         <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
-          {/* Form */}
           <div className="lg:col-span-3">
             <div className="glass-card p-6 md:p-8">
               {submitted ? (
@@ -197,15 +195,10 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Info */}
           <div className="lg:col-span-2 space-y-6">
-            {/* Contact Info */}
             <div className="glass-card p-6 space-y-5">
               <h3 className="text-lg font-semibold text-white mb-4">Contact Information</h3>
-              <a
-                href="tel:+13105550199"
-                className="flex items-center gap-4 group"
-              >
+              <a href="tel:+13105550199" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/20 flex items-center justify-center group-hover:bg-gold-500/20 transition-colors">
                   <Phone className="w-5 h-5 text-gold-400" />
                 </div>
@@ -214,10 +207,7 @@ export default function Contact() {
                   <div className="text-gray-500 text-sm">Call or text anytime</div>
                 </div>
               </a>
-              <a
-                href="mailto:info@elitedetailingla.com"
-                className="flex items-center gap-4 group"
-              >
+              <a href="mailto:info@elitedetailingla.com" className="flex items-center gap-4 group">
                 <div className="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/20 flex items-center justify-center group-hover:bg-gold-500/20 transition-colors">
                   <Mail className="w-5 h-5 text-gold-400" />
                 </div>
@@ -237,7 +227,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Business Hours */}
             <div className="glass-card p-6">
               <div className="flex items-center gap-3 mb-4">
                 <Clock className="w-5 h-5 text-gold-400" />
@@ -259,7 +248,6 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Map */}
             <div className="glass-card overflow-hidden rounded-2xl">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.0735!2d-118.3695!3d34.0736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDA0JzI1LjAiTiAxMTjCsDIyJzEwLjIiVw!5e0!3m2!1sen!2sus!4v1234567890"

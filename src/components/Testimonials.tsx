@@ -79,7 +79,6 @@ export default function Testimonials() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent" />
 
       <div className={`max-w-4xl mx-auto ${visible ? 'animate-fade-in-up' : 'opacity-0'}`}>
-        {/* Section Header */}
         <div className="text-center mb-12">
           <span className="text-gold-400 text-sm font-semibold tracking-[0.2em] uppercase">Testimonials</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mt-3 mb-6">
@@ -88,24 +87,20 @@ export default function Testimonials() {
           </h2>
         </div>
 
-        {/* Testimonial Card */}
         <div className="relative glass-card p-8 md:p-12 gold-border">
           <Quote className="absolute top-6 left-6 w-10 h-10 text-gold-500/15" />
 
           <div className="text-center">
-            {/* Stars */}
             <div className="flex justify-center gap-1 mb-6">
               {Array.from({ length: t.rating }).map((_, i) => (
                 <Star key={i} className="w-5 h-5 text-gold-400 fill-gold-400" />
               ))}
             </div>
 
-            {/* Text */}
             <p className="text-gray-200 text-lg md:text-xl leading-relaxed mb-8 font-light italic min-h-[80px]">
               "{t.text}"
             </p>
 
-            {/* Author */}
             <div className="flex items-center justify-center gap-4">
               <img
                 src={t.avatar}
@@ -119,7 +114,6 @@ export default function Testimonials() {
             </div>
           </div>
 
-          {/* Navigation */}
           <div className="flex items-center justify-between mt-8">
             <button
               onClick={prev}

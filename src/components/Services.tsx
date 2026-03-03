@@ -63,7 +63,6 @@ export default function Services() {
     <section id="services" className="section-padding bg-black relative" ref={ref}>
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent" />
       <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
         <div className="text-center mb-16">
           <span className="text-gold-400 text-sm font-semibold tracking-[0.2em] uppercase">What We Offer</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mt-3 mb-6">
@@ -75,7 +74,6 @@ export default function Services() {
           </p>
         </div>
 
-        {/* Service Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, i) => {
             const Icon = service.icon
@@ -87,7 +85,6 @@ export default function Services() {
                 }`}
                 style={{ animationDelay: `${i * 0.1}s` }}
               >
-                {/* Image */}
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src={service.image}
@@ -100,7 +97,6 @@ export default function Services() {
                   </div>
                 </div>
 
-                {/* Content */}
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-10 h-10 rounded-lg bg-gold-500/10 border border-gold-500/20 flex items-center justify-center group-hover:bg-gold-500/20 transition-colors">

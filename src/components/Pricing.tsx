@@ -71,7 +71,6 @@ export default function Pricing() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent" />
 
       <div className="relative max-w-7xl mx-auto">
-        {/* Section Header */}
         <div className="text-center mb-16">
           <span className="text-gold-400 text-sm font-semibold tracking-[0.2em] uppercase">Pricing</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mt-3 mb-6">
@@ -83,7 +82,6 @@ export default function Pricing() {
           </p>
         </div>
 
-        {/* Pricing Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {plans.map((plan, i) => {
             const Icon = plan.icon
@@ -105,7 +103,6 @@ export default function Pricing() {
                       : 'hover:border-gold-500/30'
                   }`}
                 >
-                  {/* Header */}
                   <div className="text-center mb-8">
                     <div
                       className={`w-14 h-14 mx-auto rounded-2xl flex items-center justify-center mb-4 ${
@@ -123,7 +120,6 @@ export default function Pricing() {
                     </div>
                   </div>
 
-                  {/* Features */}
                   <ul className="space-y-3 flex-1 mb-8">
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
@@ -133,7 +129,6 @@ export default function Pricing() {
                     ))}
                   </ul>
 
-                  {/* CTA */}
                   <a
                     href="#contact"
                     className={`block text-center py-4 rounded-xl font-semibold transition-all duration-300 ${

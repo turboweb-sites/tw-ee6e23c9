@@ -43,7 +43,6 @@ export default function WhyUs() {
 
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left - Image */}
           <div className={`relative ${visible ? 'animate-fade-in-up' : 'opacity-0'}`}>
             <div className="relative rounded-2xl overflow-hidden">
               <img
@@ -53,14 +52,12 @@ export default function WhyUs() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             </div>
-            {/* Floating card */}
             <div className="absolute -bottom-6 -right-4 md:right-6 glass-card gold-border p-4 md:p-6 animate-float">
               <div className="text-3xl font-bold gold-text">12+</div>
               <div className="text-gray-300 text-sm">Years of Excellence</div>
             </div>
           </div>
 
-          {/* Right - Content */}
           <div>
             <span className="text-gold-400 text-sm font-semibold tracking-[0.2em] uppercase">Why Choose Us</span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mt-3 mb-6">
