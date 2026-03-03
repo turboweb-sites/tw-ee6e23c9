@@ -5,20 +5,20 @@
   "version": "1.0.0",
   "type": "module",
   "engines": {
-    "node": ">=18"
+    "node": "18.x"
   },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "serve dist -s -l ${PORT:-8080}"
+    "start": "npx serve dist -s -l ${PORT:-3000}"
   },
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "lucide-react": "^0.453.0",
     "wouter": "^3.3.5",
-    "serve": "^14.0.0"
+    "serve": "^14.2.4"
   },
   "devDependencies": {
     "@types/react": "^18.3.12",
