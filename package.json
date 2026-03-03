@@ -1,4 +1,3 @@
-
 {
   "name": "elite-detailing-la",
   "private": true,
@@ -11,7 +10,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "npx serve dist -s -l ${PORT:-3000}"
+    "start": "serve dist -l ${PORT:-8080}"
   },
   "dependencies": {
     "react": "^18.3.1",
